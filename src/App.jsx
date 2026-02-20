@@ -4,10 +4,11 @@ import {
   // Footer,
   Hero,
   PopularProducts,
+  SuperQuality,
   // Services,
   // SpecialOffer,
   // Subscribe,
-  // // SuperQuality,
+  
 } from "./sections";
 
 const App = () => {
@@ -20,9 +21,9 @@ const App = () => {
       <section className='padding'>
         <PopularProducts />
       </section>
-      {/* <section className='padding'>
+      <section className='padding'>
         <SuperQuality />
-      </section> */}
+      </section>
       {/* <section className='padding-x py-10'>
         <Services />
       </section> */}
