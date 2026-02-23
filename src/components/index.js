@@ -1,15 +1,15 @@
 import Button from "./Button";
 import Nav from "./Nav";
-import ShoeCard from "./ShoeCard";
 import PopularProductCard from "./PopularProductCard";
-// import ServiceCard from "./ServiceCard";
-import Review from "./Review";
+import ShoeCard from "./ShoeCard";
+import ReviewCard from "./Review";
+import ServiceCard from "./ServiceCard"; // ✅ DEFAULT IMPORT
 
 export {
-    Button,
-    Nav,
-    ShoeCard,
-    PopularProductCard,
-    // ServiceCard,
-    Review,
-}
+  Button,
+  Nav,
+  PopularProductCard,
+  ShoeCard,
+  ReviewCard,
+  ServiceCard,
+};

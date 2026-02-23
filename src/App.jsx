@@ -1,14 +1,9 @@
-import { Nav } from "./components";
 import {
-  // CustomerReviews,
-  // Footer,
   Hero,
   PopularProducts,
   SuperQuality,
-  // Services,
-  // SpecialOffer,
-  // Subscribe,
-  
+  Services,
+  CustomerReviews,
 } from "./sections";
 
 const App = () => {
@@ -24,20 +19,22 @@ const App = () => {
       <section className='w-full overflow-x-hidden padding'>
         <SuperQuality />
       </section>
-      {/* <section className='padding-x py-10'>
+      <section className='padding-x py-10'>
         <Services />
-      </section> */}
-      {/* <section className='padding'>
-        <SpecialOffer />
       </section>
-      <section className='bg-pale-blue padding'>
+      {<section className='bg-pale-blue padding'>
         <CustomerReviews />
-      </section>
-      <section className='padding-x sm:py-32 py-16 w-full'>
-        <Subscribe />
-      </section>
-      <section className=' bg-black padding-x padding-t pb-8'>
-        <Footer />
+      </section>}
+
+
+      {/* // <section className='padding-x sm:py-32 py-16 w-full'>
+      //   <Subscribe />
+      // </section>
+      // <section className=' bg-black padding-x padding-t pb-8'>
+      //   <Footer />
+      // </section> */}
+      {/* {<section className='padding'>
+        <SpecialOffer />
       </section> */}
     </main>
   );
