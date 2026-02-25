@@ -1,19 +1,30 @@
-const ServiceCard = ({ imgURL, label, subtext }) => {
+import { star } from "../assets/icons";
+
+const ReviewCard = ({ imgURL, customerName, rating, feedback }) => {
   return (
-    <div className="flex-1 sm:w-[350px] sm:min-w-[350px] w-full rounded-[20px] shadow-3xl px-10 py-16">
-      <div className="w-11 h-11 flex justify-center items-center bg-coral-red rounded-full">
-        <img src={imgURL} alt={label} width={24} height={24} />
+    <div className="flex justify-center items-center flex-col">
+      <img
+        src={imgURL}
+        alt={customerName}
+        className="rounded-full object-cover w-[120px] h-[120px]"
+      />
+
+      <p className="mt-6 max-w-sm text-center info-text">
+        {feedback}
+      </p>
+
+      <div className="mt-3 flex items-center gap-2">
+        <img src={star} alt="rating star" width={24} height={24} />
+        <p className="text-xl font-montserrat text-slate-gray">
+          ({rating})
+        </p>
       </div>
 
-      <h3 className="mt-5 font-palanquin text-3xl leading-normal font-bold">
-        {label}
+      <h3 className="mt-1 font-palanquin text-3xl font-bold text-center">
+        {customerName}
       </h3>
-
-      <p className="mt-3 break-words font-montserrat text-lg leading-normal text-slate-gray">
-        {subtext}
-      </p>
     </div>
   );
 };
 
-export default ServiceCard;
+export default ReviewCard;

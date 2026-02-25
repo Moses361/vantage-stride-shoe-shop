@@ -70,7 +70,7 @@ export const services = [
     },
 ];
 
-export const Review = [
+export const reviews = [
     {
         imgURL: customer1,
         customerName: 'Morich Brown',
