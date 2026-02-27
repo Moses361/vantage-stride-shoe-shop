@@ -56,3 +56,9 @@
     @apply font-montserrat text-slate-gray text-lg leading-7;
   }
 }
+
+@layer components {
+  .nav-link {
+    @apply font-montserrat text-lg text-slate-gray hover:text-black cursor-pointer;
+  }
+}
