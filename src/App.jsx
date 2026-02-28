@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-
 import { Nav } from "./components";
+
 import {
   CustomerReviews,
   Footer,
@@ -14,51 +14,57 @@ import {
 
 const Home = () => (
   <>
-    <section className="xl:padding-l wide:padding-r padding-b">
+    <section className="xl:padding-l wide:padding-r padding-b pt-24">
       <Hero />
     </section>
-    <section className="padding">
+
+    <section className="padding pt-24">
       <PopularProducts />
     </section>
-    <section className="padding">
+
+    <section className="padding pt-24">
       <SuperQuality />
     </section>
-    <section className="padding-x py-10">
+
+    <section className="padding-x py-10 pt-24">
       <Services />
     </section>
-    <section className="padding">
+
+    <section className="padding pt-24">
       <SpecialOffer />
     </section>
-    <section className="bg-pale-blue padding">
+
+    <section className="bg-pale-blue padding pt-24">
       <CustomerReviews />
     </section>
-    <section className="padding-x sm:py-32 py-16 w-full">
+
+    <section className="padding-x sm:py-32 py-16 w-full pt-24">
       <Subscribe />
     </section>
   </>
 );
 
 const About = () => (
-  <section className="padding">
+  <section className="padding pt-24 min-h-[70vh]">
     <SuperQuality />
   </section>
 );
 
 const Products = () => (
-  <section className="padding">
+  <section className="padding pt-24">
     <PopularProducts />
   </section>
 );
 
 const Contact = () => (
-  <section className="padding">
+  <section className="padding pt-24 min-h-[70vh]">
     <Subscribe />
   </section>
 );
 
 const App = () => {
   return (
-        <main className="relative pt-8 md:pt-24">
+    <main className="relative">
       <Nav />
 
       <Routes>
