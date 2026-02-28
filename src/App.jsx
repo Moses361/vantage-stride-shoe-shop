@@ -39,26 +39,26 @@ const Home = () => (
 );
 
 const About = () => (
-  <section className="padding mt-32">
+  <section className="padding">
     <SuperQuality />
   </section>
 );
 
 const Products = () => (
-  <section className="padding mt-32">
+  <section className="padding">
     <PopularProducts />
   </section>
 );
 
 const Contact = () => (
-  <section className="padding mt-32">
+  <section className="padding">
     <Subscribe />
   </section>
 );
 
 const App = () => {
   return (
-    <main className="relative">
+        <main className="relative pt-8 md:pt-24">
       <Nav />
 
       <Routes>

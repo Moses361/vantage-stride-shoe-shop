@@ -7,7 +7,7 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="padding-x py-8 absolute z-10 w-full">
+      <header className="padding-x py-6 fixed top-0 left-0 w-full bg-white z-50 shadow-sm">
       <nav className="flex justify-between items-center max-container relative">
         {/* Logo */}
         <Link to="/">
