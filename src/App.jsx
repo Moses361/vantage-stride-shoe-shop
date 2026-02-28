@@ -14,57 +14,57 @@ import {
 
 const Home = () => (
   <>
-    <section className="xl:padding-l wide:padding-r padding-b pt-24">
+    <section className="xl:padding-l wide:padding-r padding-b">
       <Hero />
     </section>
 
-    <section className="padding pt-24">
+    <section className="padding">
       <PopularProducts />
     </section>
 
-    <section className="padding pt-24">
+    <section className="padding">
       <SuperQuality />
     </section>
 
-    <section className="padding-x py-10 pt-24">
+    <section className="padding-x py-10">
       <Services />
     </section>
 
-    <section className="padding pt-24">
+    <section className="padding">
       <SpecialOffer />
     </section>
 
-    <section className="bg-pale-blue padding pt-24">
+    <section className="bg-pale-blue padding">
       <CustomerReviews />
     </section>
 
-    <section className="padding-x sm:py-32 py-16 w-full pt-24">
+    <section className="padding-x sm:py-32 py-16 w-full">
       <Subscribe />
     </section>
   </>
 );
 
 const About = () => (
-  <section className="padding pt-24 min-h-[70vh]">
+  <section className="padding min-h-[70vh]">
     <SuperQuality />
   </section>
 );
 
 const Products = () => (
-  <section className="padding pt-24">
+  <section className="padding">
     <PopularProducts />
   </section>
 );
 
 const Contact = () => (
-  <section className="padding pt-24 min-h-[70vh]">
+  <section className="padding min-h-[70vh]">
     <Subscribe />
   </section>
 );
 
 const App = () => {
   return (
-    <main className="relative">
+    <main className="relative pt-20">
       <Nav />
 
       <Routes>
