@@ -1,4 +1,4 @@
-import { Routes, Route, useParams } from "react-router-dom";
+import { Routes, Route, useParams, Link } from "react-router-dom"; // Added Link
 import { Nav } from "./components";
 import { products } from "./constants";
 import {
@@ -38,20 +38,41 @@ const Home = () => (
   </>
 );
 
+// FINISHED: About Us with Brand Mission Story
 const About = () => (
-  <section className="padding pt-16 sm:pt-28">
-    <SuperQuality />
+  <section className="padding pt-32 min-h-screen flex flex-col gap-20">
+    <div className="max-container">
+      <SuperQuality />
+    </div>
+
+    {/* The Vantage Story Mission Box */}
+    <div className="max-container flex flex-col items-center text-center bg-pale-blue p-16 rounded-3xl mb-20 border border-slate-100 shadow-sm">
+      <h2 className="text-4xl font-palanquin font-bold">
+        The <span className="text-coral-red">Vantage</span> Story
+      </h2>
+      <p className="mt-6 font-montserrat text-slate-gray max-w-3xl text-lg leading-8 italic">
+        Founded by Moses, Vantage was built on a simple principle: elite performance 
+        should never sacrifice style. our mission is to empower athletes and everyday champions with footwear that delivers unparalleled comfort, cutting-edge innovation, and bold design. From our humble beginnings to becoming a global brand, we remain committed to pushing the boundaries of what's possible in footwear, inspiring confidence and excellence in every step.
+      </p>
+      <div className="mt-10">
+        <Link to="/products">
+          <button className="bg-coral-red text-white px-8 py-4 rounded-full font-montserrat font-bold hover:bg-black transition-all shadow-lg">
+            Explore Our Full Collection
+          </button>
+        </Link>
+      </div>
+    </div>
   </section>
 );
 
 const Products = () => (
-  <section className="padding pt-16 sm:pt-28">
+  <section className="padding pt-32">
     <PopularProducts />
   </section>
 );
 
 const Contact = () => (
-  <section className="padding pt-16 sm:pt-28">
+  <section className="padding pt-32">
     <ContactUs />
   </section>
 );
@@ -71,6 +92,9 @@ const Details = () => {
         <div className="flex-1 flex flex-col">
           <h1 className="text-4xl font-bold font-palanquin">{shoe.name}</h1>
           <p className="text-2xl text-coral-red font-montserrat font-semibold mt-4">{shoe.price}</p>
+          <p className="text-slate-gray font-montserrat mt-6 leading-7">
+            Experience premium comfort and elite performance built for everyday excellence by Vantage.
+          </p>
           <div className="mt-10">
              <ContactUs />
           </div>
