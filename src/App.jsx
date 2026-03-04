@@ -37,24 +37,41 @@ const Home = () => (
   </>
 );
 
-// ✅ Add top padding to About Us page
 const About = () => (
   <section className="padding pt-16 sm:pt-28">
     <SuperQuality />
   </section>
 );
 
-// ✅ Add top padding to Products page
 const Products = () => (
   <section className="padding pt-16 sm:pt-28">
     <PopularProducts />
   </section>
 );
 
-// ✅ Add top padding to Contact Us page
 const Contact = () => (
   <section className="padding pt-16 sm:pt-28">
     <Subscribe />
+  </section>
+);
+
+const Details = () => (
+  <section className="padding pt-16 sm:pt-28 flex flex-col items-center">
+    <h1 className="text-4xl font-bold font-palanquin mb-6">
+      Shoe Details
+    </h1>
+
+    <p className="text-slate-gray font-montserrat text-center max-w-md mb-8">
+      Experience premium Nike comfort and elite performance built for
+      everyday excellence.
+    </p>
+
+    <a
+      href="/contact"
+      className="bg-coral-red text-white px-6 py-3 rounded-lg hover:opacity-90 transition"
+    >
+      Contact Us To Buy Shoes
+    </a>
   </section>
 );
 
@@ -68,6 +85,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Products />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/details" element={<Details />} />
       </Routes>
 
       <section className="bg-black padding-x padding-t pb-8">

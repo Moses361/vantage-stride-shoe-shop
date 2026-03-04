@@ -4,7 +4,6 @@ import { Button, ShoeCard } from "../components";
 import { arrowRight } from "../assets/icons";
 
 const Hero = () => {
-  // Start with the first shoe as the big image
   const [bigShoeImg, setBigShoeImg] = useState(shoes[0].bigShoe);
 
   return (
@@ -12,7 +11,6 @@ const Hero = () => {
       id="home"
       className="w-full flex flex-col xl:flex-row justify-center min-h-screen gap-6 sm:gap-10 overflow-x-hidden max-container"
     >
-      {/* LEFT CONTENT */}
       <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full px-4 sm:px-6 pt-16 sm:pt-28">
         <p className="text-base sm:text-xl font-montserrat text-coral-red">
           Our Summer collections
@@ -33,7 +31,6 @@ const Hero = () => {
 
         <Button label="Shop now" iconURL={arrowRight} />
 
-        {/* Statistics */}
         <div className="flex flex-wrap gap-8 sm:gap-16 mt-12 sm:mt-20">
           {statistics.map((stat, index) => (
             <div key={index}>
@@ -48,15 +45,17 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* RIGHT IMAGE */}
       <div className="relative flex-1 flex justify-center items-center xl:min-h-screen py-16 sm:py-24 bg-primary bg-hero bg-cover bg-center">
-        <img
-          src={bigShoeImg}
-          alt="big shoe"
-          className="object-contain relative z-10 max-w-full"
-        />
+        
+        {/* BIG SHOE NOW GOES TO CONTACT PAGE */}
+        <a href="/contact">
+          <img
+            src={bigShoeImg}
+            alt="big shoe"
+            className="object-contain relative z-10 max-w-full cursor-pointer hover:scale-105 transition duration-300"
+          />
+        </a>
 
-        {/* Shoe thumbnails */}
         <div className="flex flex-wrap sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] justify-center w-full px-4 sm:px-0">
           {shoes.map((shoe, index) => (
             <ShoeCard
