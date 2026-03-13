@@ -28,48 +28,66 @@ const Nav = () => {
           </span>
         </Link>
 
-        {/* Desktop Menu */}
-        <ul className="flex-1 flex justify-center items-center gap-12 max-lg:hidden">
-          <li>
-            <Link to="/" className="font-montserrat text-lg text-slate-gray hover:text-coral-red transition">
-              Home
-            </Link>
-          </li>
 
-          <li>
-            <Link to="/about" className="font-montserrat text-lg text-slate-gray hover:text-coral-red transition">
-              About Us
-            </Link>
-          </li>
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex items-center gap-12">
 
-          <li>
-            <Link to="/products" className="font-montserrat text-lg text-slate-gray hover:text-coral-red transition">
-              Products
-            </Link>
-          </li>
+          <ul className="flex items-center gap-12">
+            <li>
+              <Link
+                to="/"
+                className="font-montserrat text-lg text-slate-gray hover:text-coral-red transition"
+              >
+                Home
+              </Link>
+            </li>
 
-          <li>
-            <Link to="/contact" className="font-montserrat text-lg text-slate-gray hover:text-coral-red transition">
-              Contact Us
-            </Link>
-          </li>
-        </ul>
+            <li>
+              <Link
+                to="/about"
+                className="font-montserrat text-lg text-slate-gray hover:text-coral-red transition"
+              >
+                About Us
+              </Link>
+            </li>
 
-        {/* Desktop Button */}
-        <div className="max-lg:hidden">
+            <li>
+              <Link
+                to="/products"
+                className="font-montserrat text-lg text-slate-gray hover:text-coral-red transition"
+              >
+                Products
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/contact"
+                className="font-montserrat text-lg text-slate-gray hover:text-coral-red transition"
+              >
+                Contact Us
+              </Link>
+            </li>
+          </ul>
+
           <Link
             to="/products"
             className="bg-coral-red text-white px-8 py-2 rounded-full hover:bg-black transition"
           >
             Shop Now
           </Link>
+
         </div>
 
-        {/* Hamburger / Close Button */}
-        <button className="max-lg:block" onClick={toggleMenu}>
+
+        {/* Hamburger Button */}
+        <button
+          className="lg:hidden"
+          onClick={toggleMenu}
+        >
           {isOpen ? (
 
-            /* CLOSE ICON */
+            /* X Icon */
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -91,6 +109,7 @@ const Nav = () => {
 
           )}
         </button>
+
 
         {/* Mobile Menu */}
         {isOpen && (

@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <section className="w-full">
+    <main className="pt-28 w-full">
 
       {/* Top Section */}
-      <div className="padding-t padding-b">
+      <section className="padding-t padding-b">
         <SuperQuality />
-      </div>
-
+      </section>
 
       {/* Brand Story */}
       <section className="padding bg-pale-blue">
@@ -52,9 +51,9 @@ const About = () => {
             </Link>
 
           </div>
+
         </div>
       </section>
-
 
       {/* Brand Values */}
       <section className="padding-x py-24">
@@ -72,7 +71,6 @@ const About = () => {
             </p>
           </div>
 
-
           <div className="flex flex-col gap-4">
             <h3 className="text-2xl font-bold font-palanquin">
               Quality
@@ -84,7 +82,6 @@ const About = () => {
               performance.
             </p>
           </div>
-
 
           <div className="flex flex-col gap-4">
             <h3 className="text-2xl font-bold font-palanquin">
@@ -101,7 +98,7 @@ const About = () => {
         </div>
       </section>
 
-    </section>
+    </main>
   );
 };
 
