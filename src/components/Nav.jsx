@@ -6,6 +6,7 @@ import vantageLogo from "../assets/images/vantage-logo.png";
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
   return (
@@ -26,7 +27,6 @@ const Nav = () => {
             VANTAGE.
           </span>
         </Link>
-
 
         {/* Desktop Menu */}
         <ul className="flex-1 flex justify-center items-center gap-12 max-lg:hidden">
@@ -55,7 +55,6 @@ const Nav = () => {
           </li>
         </ul>
 
-
         {/* Desktop Button */}
         <div className="max-lg:hidden">
           <Link
@@ -66,20 +65,36 @@ const Nav = () => {
           </Link>
         </div>
 
+        {/* Hamburger / Close Button */}
+        <button className="max-lg:block" onClick={toggleMenu}>
+          {isOpen ? (
 
-        {/* Hamburger / X Button */}
-        <button
-          className="hidden max-lg:block text-3xl font-bold"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? "✕" : <img src={hamburger} alt="menu" width={25} height={25} />}
+            /* CLOSE ICON */
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-7 h-7"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+
+          ) : (
+
+            <img src={hamburger} alt="menu" width={25} height={25} />
+
+          )}
         </button>
-
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="absolute top-[70px] left-0 w-full bg-white shadow-xl border-t lg:hidden">
-
+          <div className="absolute top-[70px] left-0 w-full bg-white shadow-xl border-t lg:hidden z-50">
             <ul className="flex flex-col items-center gap-8 py-10 font-montserrat text-xl">
 
               <li onClick={closeMenu}>
@@ -108,7 +123,6 @@ const Nav = () => {
               </li>
 
             </ul>
-
           </div>
         )}
 
